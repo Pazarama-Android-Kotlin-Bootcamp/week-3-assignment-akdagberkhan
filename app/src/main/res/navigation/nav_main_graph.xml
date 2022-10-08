@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main_graph"
+    app:startDestination="@id/filmsMainFragment">
+
+    <fragment
+        android:id="@+id/filmsMainFragment"
+        android:name="com.akdagberkhan.filminfoapp.ui.fragments.FilmsMainFragment"
+        android:label="fragment_films_main"
+        tools:layout="@layout/fragment_films_main" >
+
+        <action
+            android:id="@+id/action_filmListToDetail"
+            app:destination="@id/filmDetailFragment" />
+
+        <argument
+            android:name="filmModel"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/filmDetailFragment"
+        android:name="com.akdagberkhan.filminfoapp.ui.fragments.FilmDetailFragment"
+        android:label="fragment_film_detail"
+        tools:layout="@layout/fragment_film_detail" />
+</navigation>
